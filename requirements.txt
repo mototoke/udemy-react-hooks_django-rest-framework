@@ -1,4 +1,4 @@
-Django==3.0
+Django==3.0.7
 # django-bootstrap4
 psycopg2
 psycopg2-binary
