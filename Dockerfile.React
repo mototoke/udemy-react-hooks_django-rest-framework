@@ -2,4 +2,5 @@ FROM node:12
 WORKDIR /usr/src/app
 RUN npm install -g create-react-app
 
-# RUN create-react-app
+# RUN create-react-app react-basic
+# RUN create-react-app react-basic --template typescript

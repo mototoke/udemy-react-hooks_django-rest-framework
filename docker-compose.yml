@@ -9,8 +9,21 @@ services:
         dockerfile: Dockerfile.React
     volumes:
         - ./client/:/usr/src/app
+    # command: sh -c "cd react-basic && yarn start"
     ports:
-    - "3000:3000"
+      - "3000:3000"
+    tty: true
+  react-ts:
+    container_name: udemy-react-ts
+    tty: true
+    build:
+        context: .
+        dockerfile: Dockerfile.React
+    volumes:
+        - ./client2/:/usr/src/app
+    # command: sh -c "cd react-basic && yarn start"
+    ports:
+      - "3001:3000"
     tty: true
 
   django:
@@ -53,6 +66,7 @@ services:
 #     depends_on:
 #       - django
 #       - react
+#       - react-ts
 #     environment:
 #       PROXY_HOST: localhost
 #     ports:
